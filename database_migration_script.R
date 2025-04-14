@@ -1,13 +1,3 @@
-# Given the assignment, I made a step by step of what I had to do.. load the nycflights23 dataset/package, create a PostgreSQL database and schema with the names nycflights23 and schema respectively then create and populate the 5 tables: Airlines, Airport, Flight, Planes and Weather.
-
-# To kick off, I installed needed package (DBI - to define the schema) since I didn't already have that installed. After installation, next was to load required packages;
-# • nycflights23 - Contains the dataset
-# • DBI - To define the schema
-# • RPostgres - To insert data into Postgres
-# • yaml - To connect to my yaml file
-
-#After that was done, I defined the schemas and inserted the data into PostgreSQL using DBI & RPostgres
-
 #Loading libraries
 library(nycflights23)
 library(DBI)
@@ -214,11 +204,3 @@ if (!is.null(conn)) {
 } else {
    cat("Failed to connect to the database. Please check the connection parameters.\n")
 }
-
-# In essence, this script;
-# Checks for valid, successful connection
-#Creates the PostgreSQL nycflights23 database and flights schema
-# Defines the five tables
-# Uploads data into the tables
-# Creates relationships
-# try catch used to display specific errors
